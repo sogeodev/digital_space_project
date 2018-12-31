@@ -1,0 +1,591 @@
+@charset "UTF-8";
+
+html, body {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+#map {
+  width: 900px;
+  height: 500px;
+  border: 7px solid black;  /*지도 테두리 라인 두께*/
+  margin-top: 50px;
+  margin-bottom:50px;
+
+}
+
+
+
+
+/*기본색상*/
+:root {
+   --main-color: #21508A;
+   --accent-color: #963C33;
+   --dark-color: #09203D;
+   --text-bright-color:#fff;
+   --icon-color : #fff;
+   --icon-bk-color:#ddd;
+}
+
+/* 기본 설정: 페이지 전체 */
+body {
+	margin: 0;
+	font-family: '맑은 고딕',
+		'Apple SD Gothic Neo', 
+		sans-serif;
+}
+
+/* 콘텐츠A: 히어로 이미지 */
+.conA {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height: 100vh;
+    min-height: 450px;
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(img/background_1.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    color:var(--text-bright-color);
+    text-align: center;
+}
+
+.conA h1 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15vw;
+	letter-spacing: 0.2em;
+	margin-left: 0.2em;
+}
+
+.conA p {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 18px;
+}
+
+.conA img { /*웃는 사자 크기 조절*/
+	width: 6%;
+	width: 6%;
+}
+
+.conA a {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 10px 30px;
+	border: solid 3px currentColor;
+	border-radius: 6px;
+	background-color: #BF6A7A;
+	background-color: var(--accent-color);
+	color: #fff;
+	color: var(--text-bright-color);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.conA a:hover	{
+	background-image: linear-gradient(
+		rgba(255,255,255,0.2),
+		rgba(255,255,255,0.2)
+	);
+}
+
+
+@media (min-width: 768px) {
+	.conA h1 {
+		font-size: 115px;
+	}
+
+	.conA p {
+		font-size: 24px;
+	}
+
+
+}
+
+.conB .text{
+    text-align: center;
+}
+
+/*콘텐츠B: 개요(아이콘+클자) */
+.conB h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size:20px;
+}
+
+.conB p{
+    margin-top:0;
+    margin-bottom:20px;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.8;
+}
+
+.conB a{
+    color: #5D9AB2;
+    color:var(--main-color);
+    text-decoration:none;
+}
+.ConB a:hover{
+    text-decoration: underline;
+}
+
+.conB .icon{
+    display:inline-block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 40px;
+    width: 2em;
+    line-height: 2em;
+    border-radius : 50%;
+    text-align: center;
+    background-color : #ddd;
+    background-color : var(--icon-bk-color);
+    color : #fff;
+    color: var(--icon-color);
+}
+
+@media (min-width:768px){
+    .conB .container{
+        display:flex;
+    }
+    .conB .text{
+        flex:1;
+    }
+}
+
+
+/*유니버셜할리우드 소개부분*/
+.conC {
+	background-color: #01083C;
+
+	color: #fff;
+	color: var(--text-bright-color);
+	margin-top:100px;
+}
+
+
+
+
+.conC h2{
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.conC p{
+    margin-top :0;
+    margin-bottom: 20px;
+    font-size:14px;
+    line-height:1.8;
+    opacity:0.8;
+}
+
+.conC a{ /*링크를 버튼 형태로 만들기*/
+	display: inline-block;
+	margin-top:20px;
+	padding:10px 30px;
+	border: solid 3px currentColor;
+	border-radius:6px;
+	background-color: #BF6A7A;
+	background-color : var(--accent-color);
+	color:#fff;
+	color : var(--text-bright-color);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.conC a:hover{
+	background-image:linear-gradient(
+		rgba(255,255,255,0.2),
+		rgba(255,255,255,0.2)
+		);
+}
+
+.conC .photo{
+	min-height: 200px;
+	background-image:url(img/hollywood_1.jpg);  /*유니버셜할리우드 이미지 여기*/
+	background-position:center;
+	background-size:cover;
+
+}
+
+.conC .text{
+	padding:20px;
+}
+
+@media (min-width:768px){
+	.conC .container{
+		display:flex;
+	}
+	
+	.conC .photo{
+		flex:3;
+	}
+	
+	.conC .text{
+		flex:2;
+		padding:50px;
+	}
+}
+
+
+
+/*유니버셜플로리다 소개부분*/
+.conD {
+	background-color: #00A6DC;
+
+	color: #fff;
+	color: var(--text-bright-color);
+	margin-top:100px;
+}
+
+
+
+
+.conD .container{
+	padding-top:2px;
+}
+
+.conD .text{
+	padding: 20px;
+}
+
+.conD .h2{
+	margin-top:0;
+	margin-bottom: 10px;
+	font-size:20px;
+}
+
+.conD p{
+    margin-top :0;
+    margin-bottom: 20px;
+    font-size:14px;
+    line-height:1.8;
+    opacity:0.8;
+}
+
+.conD a{ /*링크를 버튼 형태로 만들기*/
+	display: inline-block;
+	margin-top:20px;
+	padding:10px 30px;
+	border: solid 3px currentColor;
+	border-radius:6px;
+	background-color: #BF6A7A;
+	background-color : var(--accent-color);
+	color:#fff;
+	color : var(--text-bright-color);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.conD a:hover{
+	background-image:linear-gradient(
+		rgba(255,255,255,0.2),
+		rgba(255,255,255,0.2)
+		);
+}
+
+.conD .photo{
+	min-height: 200px;
+	background-image:url(img/floridabg.jpg); /*유니버셜 플로리다 이미지 여기*/
+	background-position:center;
+	background-size:cover;
+
+}
+
+.conD .text{
+	padding:20px;
+}
+
+@media (min-width:768px){
+	.conD .container{
+		display:flex;
+		flex-direction: row-reverse; /*사진과 글귀 방향 바꾸는거*/
+		padding-top:40px;
+		padding-bottom:40px;
+	}
+	
+	.conD .photo{
+		flex:3;
+	}
+	
+	.conD .text{
+		flex:2;
+		padding:50px;
+	}
+}
+
+
+/*유니버셜오사카 소개부분*/
+.conE .container{
+	padding-top:2px;
+}
+
+.conE .text{
+	padding: 20px;
+}
+
+.conE .h2{
+	margin-top:0;
+	margin-bottom: 10px;
+	font-size:20px;
+}
+
+.conE p{
+    margin-top :0;
+    margin-bottom: 20px;
+    font-size:14px;
+    line-height:1.8;
+    opacity:0.8;
+}
+
+.conE a{ /*링크를 버튼 형태로 만들기*/
+	display: inline-block;
+	margin-top:20px;
+	padding:10px 30px;
+	border: solid 3px currentColor;
+	border-radius:6px;
+	background-color: #BF6A7A;
+	background-color : var(--accent-color);
+	color:#fff;
+	color : var(--text-bright-color);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.conE a:hover{
+	background-image:linear-gradient(
+		rgba(255,255,255,0.2),
+		rgba(255,255,255,0.2)
+		);
+}
+
+.conE .photo{
+	min-height: 200px;
+	background-image:url(img/usjbg.jpg); /*유니버셜 오사카 이미지 여기*/
+	background-position:center;
+	background-size:cover;
+
+}
+
+.conE .text{
+	padding:20px;
+}
+
+@media (min-width:768px){
+	.conE .container{
+		display:flex;
+		flex-direction: row-reverse; /*사진과 글귀 방향 바꾸는거*/
+		padding-top:40px;
+		padding-bottom:40px;
+	}
+	
+	.conE .photo{
+		flex:3;
+	}
+	
+	.conE .text{
+		flex:2;
+		padding:50px;
+	}
+}
+
+/*유니버셜싱가포르 소개부분*/
+.conF {
+	background-color: #C76204;
+
+	color: #fff;
+	color: var(--text-bright-color);
+	margin-top:100px;
+	margin-bottom:200px;
+}
+
+
+
+
+.conF h2{
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.conF p{
+    margin-top :0;
+    margin-bottom: 20px;
+    font-size:14px;
+    line-height:1.8;
+    opacity:0.8;
+}
+
+.conF a{ /*링크를 버튼 형태로 만들기*/
+	display: inline-block;
+	margin-top:20px;
+	padding:10px 30px;
+	border: solid 3px currentColor;
+	border-radius:6px;
+	background-color: #BF6A7A;
+	background-color : var(--accent-color);
+	color:#fff;
+	color : var(--text-bright-color);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.conF a:hover{
+	background-image:linear-gradient(
+		rgba(255,255,255,0.2),
+		rgba(255,255,255,0.2)
+		);
+}
+
+.conF .photo{
+	min-height: 200px;
+	background-image:url(img/ussbg.jpg);  /*유니버셜싱가포르 이미지 여기*/
+	background-position:center;
+	background-size:cover;
+
+}
+
+.conF .text{
+	padding:20px;
+}
+
+@media (min-width:768px){
+	.conF .container{
+		display:flex;
+	}
+	
+	.conF .photo{
+		flex:3;
+	}
+	
+	.conF .text{
+		flex:2;
+		padding:50px;
+	}
+}
+
+/*유니버셜베이징 소개부분*/
+.conG {
+	background-color: #202415;
+
+	color: #fff;
+	color: var(--text-bright-color);
+	margin-top:100px;
+	margin-bottom:200px;
+}
+
+
+
+
+.conG h2{
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.conG p{
+    margin-top :0;
+    margin-bottom: 20px;
+    font-size:14px;
+    line-height:1.8;
+    opacity:0.8;
+}
+
+.conG a{ /*링크를 버튼 형태로 만들기*/
+	display: inline-block;
+	margin-top:20px;
+	padding:10px 30px;
+	border: solid 3px currentColor;
+	border-radius:6px;
+	background-color: #BF6A7A;
+	background-color : var(--accent-color);
+	color:#fff;
+	color : var(--text-bright-color);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.conG a:hover{
+	background-image:linear-gradient(
+		rgba(255,255,255,0.2),
+		rgba(255,255,255,0.2)
+		);
+}
+
+.conG .photo{
+	min-height: 200px;
+	background-image:url(img/universalbeijing.jpg);  /*유니버셜베이징 이미지 여기*/
+	background-position:center;
+	background-size:cover;
+
+}
+
+.conG .text{
+	padding:20px;
+}
+
+@media (min-width:768px){
+	.conG .container{
+		display:flex;
+	}
+	
+	.conG .photo{
+		flex:3;
+	}
+	
+	.conG .text{
+		flex:2;
+		padding:50px;
+	}
+}
+
+
+/*조원이름과 출처넣는 정보칸*/
+footer{
+	color: #fff;
+	color: var(--text-bright-color);
+	background-color:#2B5566;
+
+}
+
+footer .container{
+	padding:40px 20px;
+}
+
+
+.footA h2{
+	margin-top: 0;
+	margin-bottom:20px;
+	font-family:'Montserrat', sans-serif;
+	font-size: 30px;
+	letter-spacing:0.2em;
+}
+
+.footA p{
+	margin-top:0;
+	margin-bottom:0;
+	font-size: 14px;
+}
+
+.footA a{
+	color: inherit;
+	text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
